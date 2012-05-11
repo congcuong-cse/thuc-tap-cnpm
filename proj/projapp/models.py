@@ -24,8 +24,8 @@ class LOP_MON_HOC (models.Model):
     MON_HOC = models.ForeignKey(MON_HOC);
     GIANG_VIEN = models.ForeignKey(GIANG_VIEN);
 class DANH_SACH_DIEM(models.Model):
-    MLMH = models.ForeignKey(LOP_MON_HOC, primary_key=True);
-    MSSV = models.ForeignKey(SINH_VIEN,primary_key=True);
+    MLMH = models.ForeignKey(LOP_MON_HOC);
+    MSSV = models.ForeignKey(SINH_VIEN);
     DIEM_GIUA_KY = models.IntegerField();
     DIEM_CUOI_KY = models.IntegerField();
     DIEM_TONG_KET = models.IntegerField();
