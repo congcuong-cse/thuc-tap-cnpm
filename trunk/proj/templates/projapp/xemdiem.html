@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Xem điểm" %}{% endblock %}
+
+{% block content %}
+<div class="cover" style="width:100%;background:#cfe4e8; border:1px solid black; padding:20px 0px 20px 0px;">
+	<font size="+3" face="Times New Roman, Times, serif" color="#004080"><div align="center">{% trans "XEM BẢNG ĐIỂM SINH VIÊN" %}
+		 </div>
+		 </font>
+	<form action="{% url projapp.views.ketqua %}" method="get">
+		<table width="1000" border="0" align="center">
+			<tbody>
+				<tr align="center" height="40"> </tr>
+				<tr>
+					<td width="25%" align="right"><font face="Times New Roman, Times, serif" size="4" color="#000066">Học kỳ</font></td>
+					<td width="10%">
+						<select name="hoc_ky">
+							<option value="NULL">{% trans "Tất cả" %}</option>
+							{% for hoc_ky in hoc_ky_list %}
+								<option value="{{ hoc_ky.mhk }}">{{ hoc_ky.ten_hk }} </option>								
+							{% endfor %}					
+						</select>
+					</td>									
+					<td width="20%" align="right">
+						<font face="Times New Roman, Times, serif" size="4" color="#000066">{% trans "Nhập mã sinh viên" %}:</font>
+					</td>
+					<td width="15%"> 
+						<input type="text" size="15" name="mssv">
+					</td>
+					<td width="25%" align="left">
+						<input name="image" type="submit" value="{% trans "Xem" %}" alt="bảng điểm">
+					</td>		
+				</tr>
+				<tr>
+					<td align="center" colspan="5">
+						<font face="Times New Roman, Times, serif" size="+2" color="#FF0000"> </font>
+						</td>
+				</tr>
+		 	</tbody>
+		</table>﻿
+    </form>
+   </div>
+{% endblock %}

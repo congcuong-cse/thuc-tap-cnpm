@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %}Tài khoản{% endblock %}</title>
+</head>
+<body>
+    <div id="sidebar" align="center">
+        {% block sidebar %}
+			<h2>
+				<a href="/home/">Trang chủ</a> | <a href="/home/xemdiem/">Xem điểm</a> | <a href="/forum/">Diễn đàn</a>
+			</h2>
+        {% endblock %}
+    </div>
+
+    <div id="content" align="center">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="content2" align="center">
+        {% block content2 %}{% endblock %}
+    </div>
+    
+</body>
+</html>
