@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ {% load i18n %}
+<html lang="en">
+<head>
+	{% load static %}
+	{% get_static_prefix as STATIC_URL %}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="{{STATIC_URL}}base.css" type="text/css" media="screen" />
+    <title>{% block title %}{% trans "Trang chủ" %}{% endblock %}</title>
+    {%block head %}{% endblock %}
+</head>
+
+<body>	
+	<div id="language" align="left">
+	{% block language %}
+	{% trans "Change language" %}
+    <form action="/i18n/setlang/" method="post" style="display: inline;">
+		{% csrf_token %}
+		<input name="next" type="hidden" value="{{ redirect_to }}" />
+		<select name="language"onchange="javascript:form.submit()">
+		{% get_language_info_list for LANGUAGES as languages %}
+		<option></option>
+		{% for lang in languages %}
+		<option value="{{ lang.code }}">{{ lang.name_local }}</option>
+		{% endfor %}
+		</select>
+	</form>
+	{% endblock %}
+	</div>
+    <div id="sidebar" align="center">
+    	{% block sidebar %}
+			<ul>
+				<li><a href="/home/">{% trans "Home" %}</a></li>
+				<li><a href="{% url projapp.views.giangvien %}">{% trans "Giảng viên" %}</a></li>
+				<li><a href="{% url projapp.views.sinhvien %}">{% trans "Sinh viên" %}</a></li>
+				<li><a href="/home/xemdiem/">{% trans "Xem điểm" %}</a></li>
+				<li id="a1"><a href="/forum/">{% trans "Diễn đàn" %}</a></li>
+				
+			</ul>
+		{% endblock %}
+    </div>
+    
+    <div class="wrapper">
+	    {% block logobanner %}
+	    <div id="logo-banner">    	
+	    </div>
+	    {% endblock %}
+	    <div id="content" align="center" style="width: 960px; margin-top:20px;">
+	        {% block content %}{% endblock %}
+	    </div>
+	    <div id="content2" align="center" style="border-top: none; width: 960px; background-color: white; margin-bottom: 40px;">
+	        {% block content2 %}{% endblock %}
+	    </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,159 @@
+{% extends "fbase.html" %}
+ {% load i18n %}
+
+{% block content %}
+    <style type="text/css">
+	    html{
+	    	height:100%;
+	    }
+	    body{
+	    	height:100%;
+	    }
+	    #content{
+	    	height:100%;
+	    }
+        .pagination { 
+        margin-top: 20px;
+        height:1000px;
+        margin-left: -20px;
+        float:left;
+        background:red; }
+        .main { 
+        	width:800px;
+        	height:100%;
+        	margin:0 auto;
+        	}
+        .title { font-size: 1.4em; margin-top: 10px; padding-left: 0px; }
+        .title a { text-decoration: none; }
+        .button { background: #999; color: white; padding: 6px; text-decoration: none; float: right; }
+        .date { font-size: 0.8em; padding-left: 5px; }
+        .clear { clear: both; }
+        .last { border: 0px; }
+        .ttitle {
+            
+            border-radius:6px;-moz-border-radius: 6px;
+            background:black;
+            width:800px;
+            height:35px;
+            color:white;
+            font-size:15px;
+            font-weight:bold;
+            margin-top:15px;
+        }
+
+        #list { 
+        	border-radius:5px;
+        	background-color:#000000;
+        	border: 1px solid black; 
+        	width: 800px;
+        	height:100%;
+        	margin:20px 0px 20px 0px;
+        	background: #f6f6f6; 
+        	}
+        #back { margin: 5px; }
+        #new_topic, .button{
+	    	padding:7px 7px 7px 7px;
+	    	background:black;
+	    	border-radius: 5px;-moz-border-radius: 5px;
+	    	border:1px solid #417690;
+	    	color:white;
+	    	text-decoration: none;
+	    	font-size: 15px;
+	    	font-weight:bold;
+	    }
+	    #new_topic:hover, .button:hover{
+	    	background:#01B5B8;
+	    	text-shadow: 1px 1px 0 rgba(0,0,0,1);
+	    }
+	    .ttitle span{
+	    	padding: 9px 10px 9px 10px;
+	    	background-color: #ff6d00;
+	    	border-top-left-radius: 5px;
+	    	border-bottom-left-radius:5px;
+	    	-moz-border-top-left-radius:5px;
+	    	-moz-border-bottom-left-radius:5px;
+	    	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+	    }
+	    .post {
+        	width:780px;
+        	height:100%;
+            border: 1px solid #01B5B8;
+	         background: white;
+	         margin:10px 0px 10px 10px;
+	         border-radius:5px;
+            }
+	    .ppic {
+	    	float: left;
+	    	width:160px;
+	    	padding-left: 10px;
+	    	background:url({{STATIC_URL}}images/postthread.png) no-repeat;}
+	    .cover{
+	    	float:left;
+	    	width:590px;
+	    }
+	    .main #new a, .main a{
+	    	transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			-webkit-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			-ms-transition: all 0.3s;
+	    }
+    </style>
+
+    <div class="main">
+        <div id="new" style="">
+            <a id="new_topic" href="{% url forum.views.forum forum_pk %}">Trở lại</a>
+        </div>
+        <div class="ttitle"><p style="margin:9px 0px 0px 0px;float:left;"><span>Chủ đề:</span> {{ title }}</p></div>
+        <div id="list">
+
+            <!-- Posts  -->
+            {% for post in posts.object_list %}
+                <div class="post">
+                    <div class="ppic">
+                        {% with post.profile_data as pdata %}
+                            {% if pdata.1 %}
+                                <img src="{{ media_url }}{{ pdata.1 }}" style="width:132px; height:132px; margin:11px 0px 0px 2px; border:1px solid black" /> <br />
+                            	{% else %}<img src="{{ media_url }}images/no_avatar.gif" style="margin:11px 0px 0px 2px;border:1px solid black">
+                            {% endif %}
+                            
+                        <p style="color: #01b5b8; font-weight: bold;font-size: 25px;float:left;width:100%;">{{ post.creator }}</p><br />
+                        Số bài gửi: {{ pdata.0 }}<br />
+                        Ngày tham gia: {{ post.creator.date_joined|date:"M d Y" }}
+                        {% endwith %}
+                    </div>
+                    <div class="cover">
+	                    <span class="date" style="text-decoration: underline;">{{ post.created }}</span> 
+	                    <br /><br />
+	
+	                    {{ post.body|linebreaksbr }} <br />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Next/Prev page links  -->
+        <span>
+			{% if fp.has_previous %}
+			    <a href="?page={{ insurance_plan.previous_page_number }}">previous</a>
+			{% endif %}
+			{% for num in insurance_plan.paginator.page_range %}
+		    {% ifequal num insurance_plan.number %}
+		        <span class="current page">{{ num }}</span>
+		    {% else %}
+		        <a href="?page={{ num }}"> {{ num }}</a>
+		    {% endifequal %} 
+			{% endfor %}
+			    
+			{% if insurance_plan.has_next %}
+			    <a href="?page={{ insurance_plan.next_page_number }}"> Next </a>
+			{% endif %}
+		</span>
+
+        <br />
+        <a class="button" href="{% url forum.views.post 'reply' pk %}" style="margin-bottom: 20px;">Reply</a>
+
+    </div>
+
+{% endblock %}

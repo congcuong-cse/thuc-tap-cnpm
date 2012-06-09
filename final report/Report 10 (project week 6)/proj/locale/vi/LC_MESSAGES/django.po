@@ -1,0 +1,425 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-03 13:54+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: .\forum\models.py:67
+msgid "Profile Pic"
+msgstr "Profile Pic"
+
+#: .\forum\views.py:89
+msgid "Start New Topic"
+msgstr "Tạo topic mới"
+
+#: .\proj\settings.py:41
+msgid "Vietnamese"
+msgstr "Tiếng Việt"
+
+#: .\proj\settings.py:42
+msgid "English"
+msgstr "Tiếng Anh"
+
+#: .\projapp\models.py:9
+msgid "Mã giảng viên"
+msgstr "Mã giảng viên"
+
+#: .\projapp\models.py:10
+msgid "Tên giảng viên"
+msgstr "Tên giảng viên"
+
+#: .\projapp\models.py:11 .\projapp\models.py:40
+msgid "Ngày sinh"
+msgstr "Ngày sinh"
+
+#: .\projapp\models.py:17 .\projapp\models.py:81 .\templates\base.html.py:34
+#: .\templates\fbase.html.py:37 .\templates\projapp\giangvien.html.py:3
+#: .\templates\projapp\giangvien.html.py:47
+msgid "Giảng viên"
+msgstr "Giảng viên"
+
+#: .\projapp\models.py:22
+msgid "Nam"
+msgstr "Nam"
+
+#: .\projapp\models.py:23
+msgid "Nữ"
+msgstr "Nữ"
+
+#: .\projapp\models.py:26
+msgid "Cơ khí"
+msgstr "Cơ khí"
+
+#: .\projapp\models.py:27
+msgid "Địa chất-Dầu khí"
+msgstr "Địa chất-Dầu khí"
+
+#: .\projapp\models.py:28
+msgid "Điện - Điện tử"
+msgstr "Điện - Điện tử"
+
+#: .\projapp\models.py:29
+msgid "Khoa học và Kỹ thuật Máy tính"
+msgstr "Khoa học và Kỹ thuật Máy tính"
+
+#: .\projapp\models.py:30
+msgid "Kỹ thuật Hóa học"
+msgstr "Kỹ thuật Hóa học"
+
+#: .\projapp\models.py:31
+msgid "Quản lý Công nghiệp"
+msgstr "Quản lý Công nghiệp"
+
+#: .\projapp\models.py:32
+msgid "Kỹ Thuật Xây dựng"
+msgstr "Kỹ Thuật Xây dựng"
+
+#: .\projapp\models.py:33
+msgid "Môi trường"
+msgstr "Môi trường"
+
+#: .\projapp\models.py:34
+msgid "Kỹ thuật Giao thông"
+msgstr "Kỹ thuật Giao thông"
+
+#: .\projapp\models.py:35
+msgid "Khoa học Ứng dụng"
+msgstr "Khoa học Ứng dụng"
+
+#: .\projapp\models.py:36
+msgid "Công nghệ Vật liệu"
+msgstr "Công nghệ Vật liệu"
+
+#: .\projapp\models.py:38 .\templates\projapp\sinhvien.html.py:47
+msgid "Mã số sinh viên"
+msgstr "Mã số sinh viên"
+
+#: .\projapp\models.py:39
+msgid "Tên sinh viên"
+msgstr "Tên sinh viên"
+
+#: .\projapp\models.py:41
+msgid "Giới tính"
+msgstr "Giới tính"
+
+#: .\projapp\models.py:42
+msgid "Khoá"
+msgstr "Khoá"
+
+#: .\projapp\models.py:43
+msgid "Ngành"
+msgstr "Ngành"
+
+#: .\projapp\models.py:49 .\projapp\models.py:92 .\templates\base.html.py:35
+#: .\templates\fbase.html.py:38 .\templates\projapp\ketqua.html.py:12
+#: .\templates\projapp\ketqua_diemlop.html.py:31
+#: .\templates\projapp\sinhvien.html.py:3
+#: .\templates\projapp\sinhvien.html.py:46
+msgid "Sinh viên"
+msgstr "Sinh viên"
+
+#: .\projapp\models.py:53
+msgid "Mã môn học"
+msgstr "Mã môn học"
+
+#: .\projapp\models.py:54
+msgid "Tên môn học"
+msgstr "Mã môn học"
+
+#: .\projapp\models.py:55
+msgid "Tỉ lệ giữa kỳ"
+msgstr "Tỉ lệ giữa kỳ"
+
+#: .\projapp\models.py:58
+msgid "Tỉ lệ cuối kỳ"
+msgstr "Tỉ lệ cuối kỳ"
+
+#: .\projapp\models.py:64 .\projapp\models.py:79
+msgid "Môn học"
+msgstr "Môn học"
+
+#: .\projapp\models.py:67
+msgid "Mã học kỳ"
+msgstr "Mã học kỳ"
+
+#: .\projapp\models.py:68
+msgid "Tên học kỳ"
+msgstr "Tên học kỳ"
+
+#: .\projapp\models.py:74 .\projapp\models.py:78
+msgid "Học kỳ"
+msgstr "Học kỳ"
+
+#: .\projapp\models.py:80
+msgid "Nhóm tổ"
+msgstr "Nhóm tổ"
+
+#: .\projapp\models.py:87
+msgid "Lớp môn học"
+msgstr "Lớp môn học"
+
+#: .\projapp\models.py:91
+msgid "Học kỳ-Môn học-Nhóm"
+msgstr "Học kỳ-Môn học-Nhóm"
+
+#: .\projapp\models.py:93
+msgid "Điểm giữa kỳ"
+msgstr "Điểm giữa kỳ"
+
+#: .\projapp\models.py:94
+msgid "Điểm cuối kỳ"
+msgstr "Điểm cuối kỳ"
+
+#: .\projapp\models.py:95 .\projapp\models.py:105
+msgid "Điểm tổng kết"
+msgstr "Điểm tổng kết"
+
+#: .\projapp\models.py:112
+msgid "Danh sách sinh viên và điểm"
+msgstr "Danh sách sinh viên và điểm"
+
+#: .\projapp\views.py:34
+msgid "Bạn chưa nhập mã số sinh viên"
+msgstr "Bạn chưa nhập mã số sinh viên"
+
+#: .\projapp\views.py:38
+msgid "Không tìm thấy sinh viên"
+msgstr "Không tìm thấy sinh viên"
+
+#: .\projapp\views.py:60 .\projapp\views.py:69 .\projapp\views.py:84
+msgid "Bạn không phải là giảng viên"
+msgstr "Bạn không phải là giảng viên"
+
+#: .\projapp\views.py:73
+msgid "Bạn không phụ trách lớp học nào cả!"
+msgstr "Bạn không phụ trách lớp học nào cả!"
+
+#: .\projapp\views.py:105 .\projapp\views.py:114 .\projapp\views.py:128
+msgid "Bạn không phải là sinh viên"
+msgstr "Bạn không phải là sinh viên"
+
+#: .\projapp\views.py:118 .\projapp\views.py:133
+msgid "Không có học kỳ trong cơ sở dữ liệu"
+msgstr "Không có học kỳ trong cơ sở dữ liệu"
+
+#: .\templates\base.html.py:9 .\templates\fbase.html.py:36
+#: .\templates\rbase.html.py:29 .\templates\projapp\index.html.py:3
+msgid "Trang chủ"
+msgstr "Trang chủ"
+
+#: .\templates\base.html.py:16 .\templates\fbase.html.py:18
+#: .\templates\rbase.html.py:11
+msgid "Change language"
+msgstr "Đổi ngôn ngữ"
+
+#: .\templates\base.html.py:33
+msgid "Home"
+msgstr "Trang chủ"
+
+#: .\templates\base.html.py:36 .\templates\fbase.html.py:39
+#: .\templates\rbase.html.py:29 .\templates\projapp\xemdiem.html.py:3
+msgid "Xem điểm"
+msgstr "Xem điểm"
+
+#: .\templates\base.html.py:37 .\templates\fbase.html.py:5
+#: .\templates\fbase.html.py:40 .\templates\rbase.html.py:29
+msgid "Diễn đàn"
+msgstr "Diễn đàn"
+
+#: .\templates\rbase.html.py:6 .\templates\forum\profile.html.py:4
+msgid "Tài khoản"
+msgstr "Tài khoản"
+
+#: .\templates\forum\form.html.py:38
+msgid "Subject"
+msgstr "Tiêu đề"
+
+#: .\templates\forum\form.html.py:41 .\templates\forum\post.html.py:59
+#: .\templates\registration\registration_form.html.py:125
+msgid "Submit"
+msgstr "Đăng bài"
+
+#: .\templates\forum\forum.html.py:52
+msgid "Tạo chủ đề mới"
+msgstr "Tạo chủ đề mới"
+
+#: .\templates\forum\forum.html.py:59 .\templates\forum\post.html.py:55
+msgid "Chủ đề"
+msgstr "Chủ đề"
+
+#: .\templates\forum\forum.html.py:60
+msgid "Trả lời"
+msgstr "Trả lời"
+
+#: .\templates\forum\forum.html.py:61 .\templates\forum\list.html.py:39
+msgid "Bài mới gửi"
+msgstr "Bài mới gửi"
+
+#: .\templates\forum\forum.html.py:84
+msgid "previous"
+msgstr "Trước"
+
+#: .\templates\forum\forum.html.py:92
+msgid "next"
+msgstr "Sau"
+
+#: .\templates\forum\list.html.py:37
+msgid "Chuyên mục"
+msgstr "Chuyên mục"
+
+#: .\templates\forum\list.html.py:38
+msgid "Số bài gửi"
+msgstr "Số bài gửi"
+
+#: .\templates\forum\post.html.py:57
+msgid "Nội dung"
+msgstr "Nội dung"
+
+#: .\templates\forum\profile.html.py:22
+msgid "Edit Profile"
+msgstr "Chỉnh sửa hồ sơ"
+
+#: .\templates\projapp\diemlop.html.py:42
+msgid "Lớp học"
+msgstr "Lớp học"
+
+#: .\templates\projapp\diemlop.html.py:49
+#: .\templates\projapp\diemsinhvien.html.py:49
+#: .\templates\projapp\xemdiem.html.py:31
+msgid "Xem"
+msgstr "Xem"
+
+#: .\templates\projapp\diemsinhvien.html.py:42
+#: .\templates\projapp\sinhvien.html.py:51
+msgid "Điểm sinh viên"
+msgstr "Điểm sinh viên"
+
+#: .\templates\projapp\diemsinhvien.html.py:44
+#: .\templates\projapp\xemdiem.html.py:18
+msgid "Tất cả"
+msgstr "Tất cả"
+
+#: .\templates\projapp\giangvien.html.py:48
+msgid "Mã số giảng viên"
+msgstr "Mã số giảng viên"
+
+#: .\templates\projapp\giangvien.html.py:52
+msgid "Điểm lớp"
+msgstr "Điểm lớp"
+
+#: .\templates\projapp\index.html.py:29
+msgid "Xin chào"
+msgstr "Xin chào"
+
+#: .\templates\projapp\ketqua.html.py:21
+#: .\templates\projapp\ketqua_diemsinhvien.html.py:13
+msgid "Bảng điểm"
+msgstr "Bảng điểm"
+
+#: .\templates\projapp\ketqua.html.py:30
+#: .\templates\projapp\ketqua_diemsinhvien.html.py:21
+msgid "Mã MH"
+msgstr "Mã môn học"
+
+#: .\templates\projapp\ketqua.html.py:36
+#: .\templates\projapp\ketqua_diemsinhvien.html.py:27
+msgid "Tên Môn Học"
+msgstr "Tên Môn Học"
+
+#: .\templates\projapp\ketqua.html.py:42
+#: .\templates\projapp\ketqua_diemsinhvien.html.py:33
+msgid "Nhóm-Tổ"
+msgstr "Nhóm-Tổ"
+
+#: .\templates\projapp\ketqua.html.py:47
+#: .\templates\projapp\ketqua_diemlop.html.py:38
+#: .\templates\projapp\ketqua_diemsinhvien.html.py:38
+msgid "Điểm kiểm tra"
+msgstr "Điểm kiểm tra"
+
+#: .\templates\projapp\ketqua.html.py:52
+#: .\templates\projapp\ketqua_diemlop.html.py:43
+msgid "Điểm thi"
+msgstr "Điểm thi"
+
+#: .\templates\projapp\ketqua.html.py:57
+#: .\templates\projapp\ketqua_diemlop.html.py:48
+#: .\templates\projapp\ketqua_diemsinhvien.html.py:48
+msgid "Điểm TK"
+msgstr "Điểm tổng kết"
+
+#: .\templates\projapp\ketqua_diemlop.html.py:22
+msgid "Học kỳ -- Môn học -- Nhóm"
+msgstr "Học kỳ -- Môn học -- Nhóm"
+
+#: .\templates\projapp\xemdiem.html.py:7
+msgid "XEM BẢNG ĐIỂM SINH VIÊN"
+msgstr "Xem bảng điểm sinh viên"
+
+#: .\templates\projapp\xemdiem.html.py:25
+msgid "Nhập mã sinh viên"
+msgstr "Nhập mã sinh viên"
+
+#: .\templates\registration\activate.html.py:3
+#: .\templates\registration\activation_complete.html.py:3
+#: .\templates\registration\registration_complete.html.py:3
+#: .\templates\registration\registration_complete.html.py:14
+msgid "Đăng ký thành công"
+msgstr "Đăng ký thành công"
+
+#: .\templates\registration\activate.html.py:47
+msgid "Tài khoản của bạn đã được kích hoạt"
+msgstr "Tài khoản của bạn đã được kích hoạt"
+
+#: .\templates\registration\activation_email.txt.py:2
+msgid "Your activation key"
+msgstr "Mã kích hoạt"
+
+#: .\templates\registration\activation_email.txt.py:4
+msgid "Please use this link to activate your account"
+msgstr "Nhấp vào đường dẫn này để kích hoạt tài khoản của bạn"
+
+#: .\templates\registration\activation_email_subject.txt.py:2
+msgid "Activate your account"
+msgstr "Tài khoản của bạn đã kích hoạt thành công"
+
+#: .\templates\registration\login.html.py:3
+msgid "Đăng nhập"
+msgstr "Đăng nhập"
+
+#: .\templates\registration\login.html.py:37
+msgid "Điền thông tin tài khoản của bạn"
+msgstr "Điền thông tin tài khoản của bạn"
+
+#: .\templates\registration\login.html.py:40
+msgid "Username"
+msgstr "Tên đăng nhập"
+
+#: .\templates\registration\login.html.py:41
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: .\templates\registration\login.html.py:48
+msgid "Login"
+msgstr "Đăng nhập"
+
+#: .\templates\registration\login.html.py:49
+msgid "Register"
+msgstr "Đăng ký"
+
+#: .\templates\registration\registration_complete.html.py:15
+msgid "Vào email kích hoạt để có thể đăng nhập"
+msgstr "Vào email kích hoạt để có thể đăng nhập"
