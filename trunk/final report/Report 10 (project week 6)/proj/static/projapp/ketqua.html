@@ -1,0 +1,79 @@
+{% extends "projapp/xemdiem.html" %}
+{% block title %}Tra cứu bảng điểm{% endblock %}
+
+{% block content2 %}
+<div class="cover" style="width:100%; border:1px solid black; padding:20px 0px 20px 0px;">
+{% if error_message %}
+	<p><strong>{{ error_message }}</strong></p>
+{% else %}
+	<table align="center" width="1000" border="0">
+		<tr>
+			<font face="Times New Roman, Times, serif">Sinh viên :</font>
+			<font color="#3300CC" size="+2" face="Times New Roman, Times, serif">
+				<div align="center">{{ sinhvien.ten_sv }} - {{ sinhvien.mssv }}.</div>
+			</font>
+		</tr>
+		{% for hoc_ky in hk_list %}
+		<tr align="center" style="padding:10px 0px 10px 0px">
+			<font size="+1" color="#003399">
+				<br />
+				<div align="center">Bảng điểm {{ hoc_ky.ten_hk }} </div>
+				<br />
+			</font>
+		</tr>
+		<tr>	
+			<table  align="center" width="800" border="1" cellspacing="0">
+				<tr>
+					<td width="55" align="center" >
+						<font face="Arial, Helvetica, sans-serif"  size="2" color="#CC3300" >
+							<strong>Mã MH</strong>
+						</font>
+					</td>										
+		
+					<td width="250" align="center">
+						<font face="Arial, Helvetica, sans-serif" size="2" color="#CC3300" >
+							<strong>Tên Môn Học</strong>
+						</font>
+				
+					</td>										
+					<td width="70" align="center">
+						<font face="Arial, Helvetica, sans-serif" size="2" color="#CC3300" >
+							<strong>Nhóm-Tổ</strong>
+						</font>
+					</td>
+					<td width="70" align="center">
+						<font face="Arial, Helvetica, sans-serif" size="2" color="#CC3300" >
+							<strong>Điểm kiểm tra</strong>
+						</font>
+					</td>
+					<td width="70" align="center">
+						<font face="Arial, Helvetica, sans-serif" size="2" color="#CC3300" >
+							<strong>Điểm thi</strong>
+						</font>
+					</td>
+					<td width="70" align="center">
+						<font face="Arial, Helvetica, sans-serif" size="2" color="#CC3300" >
+							<strong>Điểm TK</strong>
+						</font>
+					</td>
+				</tr>
+				{% for kq in ketqua %}
+				{% if kq.0 == hoc_ky.mhk %}
+				<tr>
+					<td align=center><font face=Tahoma size=2 color=#0080FF>{{ kq.1 }}</font></td>
+					<td align=center><font face=Tahoma size=2 color=#0080FF>{{ kq.2 }}</font></td>
+					<td align=center><font face=Tahoma size=2 color=#0080FF>{{ kq.3 }}</font></td>
+					<td align=center><font face=Tahoma size=2 color=#0080FF>{{ kq.4 }}</font></td>
+					<td align=center><font face=Tahoma size=2 color=#0080FF>{{ kq.5 }}</font></td>
+					<td align=center><font face=Tahoma size=2 color=#0080FF>{{ kq.6 }}</font></td>			
+				</tr>
+				{% endif %}
+			{% endfor %}
+			</table>
+		</tr>
+		{% endfor %}
+	</table>
+{% endif %}
+</div>
+
+{% endblock %}
